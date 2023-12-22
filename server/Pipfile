@@ -10,6 +10,7 @@ numpy = "*"
 scikit-image = "*"
 matplotlib = "*"
 opencv-python = "*"
+python-multipart = "*"
 
 [dev-packages]
 
