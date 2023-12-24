@@ -6,6 +6,7 @@ import {
 import Root from './Root'
 import SignatureExtraction from './SignatureExtraction'
 import SignatureMatching from './SignatureMatching'
+import Hero from './Hero'
 
 function App() {
  
@@ -14,8 +15,9 @@ function App() {
     <Router>
       <Routes>
         <Route path='/' element={<Root/>}>
+          <Route path ='/' element={<Hero/>}/>
           <Route path='extraction' element={<SignatureExtraction/>} />
-          <Route path='matching' element={<SignatureMatching/>} />
+          <Route path='matcher' element={<SignatureMatching/>} />
         </Route>
       </Routes>
     </Router>
