@@ -12,7 +12,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Update with your React app's origin
+    allow_origins=["http://localhost:5173"],  # Update with your React app's origin
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -46,7 +46,7 @@ async def match(image1: UploadFile, image2: UploadFile):
     os.remove(input1_file_path)
     os.remove(input2_file_path)
 
-    return {"data": similarity_value}
+    return {"similarity": similarity_value}
 
 @app.post("/api/extract")
 async def extract(image: UploadFile):
