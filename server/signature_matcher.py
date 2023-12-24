@@ -1,7 +1,7 @@
 import cv2
 from skimage.metrics import structural_similarity as ssim
 
-def match(path1, path2):
+def image_match(path1, path2):
     # read the images
     img1 = cv2.imread(path1)
     img2 = cv2.imread(path2)
@@ -15,3 +15,6 @@ def match(path1, path2):
     similarity_value = "{:.2f}".format(ssim(img1, img2)*100)
 
     return float(similarity_value)
+
+if __name__ == "__main__":
+   image_match("./inputs/in1.jpg", "./inputs/in1.jpg")
