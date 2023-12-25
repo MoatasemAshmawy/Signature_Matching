@@ -55,7 +55,7 @@ const SignatureMatching = () => {
   return (
     <div className="flex flex-col items-center justify-center">
       <h1 className="text-2xl mb-2">
-        Extract Your Signature from a document image
+        Check for match percentage between 2 signatures
       </h1>
       <div className="w-1/2">
         <DropZone maxFiles={2} setFiles={setFiles} files={files} />
